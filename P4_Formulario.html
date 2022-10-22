@@ -5,119 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aroa Gil Núñez">
-    <meta 
-        name="descripción" 
-        content="Página HTML que contiene 5 hojas, incluyendo un formulario, una tabla, 
-            una lista de enlaces.">
-    <meta name="keyword" content="HTML, travel, viajar, blog">
-    <title>Hoja_4</title>
+    <meta name="descripción" 
+        content="Blog personal de viajes dividido en 5 hojas, con su correspondiente 
+            formulario, tabla, enlaces">
+    <meta name="keyword" content="travel, viajar, blog, europa, mundo">
+    <link rel="stylesheet" type="text/css" href="css/estilos4.css" media="screen"/>
+    <title>Formulario</title>
 </head>
-<body bgcolor="#E6B0AA" align="center">
+
+<body>
     <!--Cabecera de la página-->
     <header>
-        <h1><font color="#C2185B">Formulario</font></h1></body>
-    </header>
+        <nav id="navegacion">
+            <a id="home" href="#">Home</a>
+            <a id="news" href="#">News</a>
+            <a id="contact" href="#">Contact</a>
 
+            <input type="search" autocomplete="off" name="buscador" id="buscador" 
+                placeholder="Escribe un destino..." required>
+
+            <input type="submit" value="About" id="boton">
+        </nav>
+    </header>            
+    
     <!--Cuerpo de la página-->
     <main>
-        <section id="cabecera">
+        <section id="cabecera">        
+            <h1>Formulario</h1>
+
             <p>
                 Si quieres que te ayude a organizar tu próximo destino, solo tienes que rellenar este formulario
                 para que me pueda poner en contacto contigo.
             </p>
-            <p><em>La vida es compartir experiencias.</em></p>
+            <p>La vida es compartir experiencias !! </p>
         </section>
         <br>
 
-        <section id="formulario">
+        <form action="">
             <!--Con fiesldset marcamos con borde el campo del formulario-->
-            <fieldset>
+            <fieldset id="datos">
                 <!--Con legend escribimos el título del campo-->
-                <legend><strong><font color="#C2185B">Datos personales</font></strong></legend>
-
-                <p>
+                <legend><strong>Datos personales</strong></legend>
+            
+                <div id="izq">
                     <label for="nombre">Nombre: </label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" 
                         maxlength="50" autofocus="autofocus" required/>
-                </p>
-
-                <p>
+                    <br>
+                
                     <label for="apellidos">Apellidos: </label>
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"
-                        maxlength="80" required/>
-                </p>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" 
+                        maxlength="80" autofocus="autofocus" required/>
+                    <br>
 
-                <p>
-                    Sexo: 
-                    <input type="radio" name="hm" value="m" id="mujer" checked/> 
-                    <!--Con checked marco de manera predefinida uno de los radio buttons-->
-                    <label for="mujer">Mujer</label>
+                        <label for="sexo">Sexo: </label>
+                    <p>
+                        <input type="radio" name="hm" value="m" id="mujer" checked/> 
+                        <!--Con checked marco de manera predefinida uno de los radio buttons-->
+                        <label for="mujer">Mujer</label>
 
-                    <input type="radio" name="hm" value="h" id="hombre"/> 
-                    <label for="hombre">Hombre</label>
+                        <input type="radio" name="hm" value="h" id="hombre"/> 
+                        <label for="hombre">Hombre</label>
+                    </p>
+                    <br>
+                </div>
 
-                </p>
-
-                <p>
-                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="fecha nacimiento" id="fecha_nacimiento"/>
-                </p>
-
-                <p>
+                <div id="dcha">
                     <label for="telefono">Teléfono: </label>
                     <input type="tel" name="telefono" id="telefono" pattern="{9}[0-9]" placeholder="Teléfono"/>
-                </p>
+                    <br>
 
-                <p>
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email" placeholder="Email" maxlength="100" required/>
-                </p>
+                    <br>
 
-                <p>
                     <label for="password">Constraseña: </label>
                     <input type="password" name="password" id="password" value="" placeholder="******"/>
-                </p>
+                    <br>
+                </div>
+                </fieldset>
+            <br>
 
-                <p><textarea id="descripcion" rows="6" cols="60" placeholder="¿Donde tienes pensado viajar?"></textarea></p>
+            <fieldset id="viaje">
+                <legend><strong>Ideas del viaje</strong></legend>
+
+                <textarea id="descripcion" rows="6" cols="60" placeholder="¿Donde tienes pensado viajar?"></textarea>
                 
                 <p>
                     <label for="foto">Añade una foto de tu itinerario si lo prefieres: </label>
                     <input accept="image/jpeg,image/png,image/pdf" type="file" name="foto" id="foto" />
                     <!--Con el atributo "accept" indico que solo puede subir ese tipo archivos de imagenes.-->
                 </p>
-            </fieldset>
+                </fieldset>
             <br>
 
-            <fieldset>
-                <p>
-                    <button type="submit">Enviar formulario</button>
-                </p>
+            <fieldset id="enviar">
+                <legend><strong>Revise los datos y envíe el formulario</strong></legend>
+
+                <button type="submit" name="enviar">Enviar formulario</button>
+
+                <p>En cuanto reciba todos los datos te mandaré un presupuesto.</p>
+                <p><u><strong>Gracias por confiar en mí!!</strong></u></p>
             </fieldset>
-        </section>
+        </form>
         <br>
 
-        <section id="lista" align="left">
-            <h3><strong>Enlaces al resto de hojas</strong></h3>
+        <section id="enlaces">
+            <h3><strong>Navega por el resto de enlaces</strong></h3>
+
             <ul>
-                <li><a href="Hoja_1.html">Hoja 1 - Página de inicio</a></li>
-                <li><a href="Hoja_2.html">Hoja 2 - Viajes por Europa</a></li>
-                <li><a href="Hoja_3.html">Hoja 3 - Viajes por el resto del Mundo</a></li>
-                <li><a href="Hoja_4.html">Hoja 4 - Formulario</a></li>
-                <li><a href="Hoja_5.html">Hoja 5 - Tabla con los datos formulario</a></li>
+                <li><a href="P1_Inicio.html"> Página de inicio</a></li>
+                <li><a href="P2_Europa.html">Viajes por Europa</a></li>
+                <li><a href="P3_Mundo.html">Viajes por el resto del Mundo</a></li>
+                <li><a href="P4_Formulario.html">Formulario para enviar</a></li>
+                <li><a href="P5_Tabla.html">Tabla con resumen de datos</a></li>
+            </ul>
         </section>
         <br>
     </main>
 
     <!--Pie de página-->
-    <footer align="center">
-        <div class="redes">
-            <a href="#"><img id="youtube" src="img/youtube.png" height="30px" width="30px" alt="youtube"></a>
-            <a href="#"><img id="facebook" src="img/facebook.png" height="30px" width="30px" alt="facebook"></a>
-            <a href="#"><img id="instagram" src="img/instagram.png" height="30px" width="30px" alt="instagram"></a>
+    <footer>
+        <div id="redes">
+            <a href="#"><img id="youtube" src="img/youtube.png" alt="youtube"></a>
+            <a href="#"><img id="facebook" src="img/facebook.png" alt="facebook"></a>
+            <a href="#"><img id="instagram" src="img/instagram.png" alt="instagram"></a>
         </div>
 
         <div id="licencia">
-            <a href="#"><font color="black"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></font></a>
+            <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
 </body>

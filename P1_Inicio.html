@@ -5,142 +5,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aroa Gil Núñez">
-    <meta 
-        name="descripción" 
-        content="Página HTML que contiene 5 hojas, incluyendo un formulario, una tabla, 
-            una lista de enlaces.">
-    <meta name="keyword" content="HTML, travel, viajar, blog, europa, mundo">
-    <title>Hoja_1</title>
+    <meta name="descripción" 
+        content="Blog personal de viajes dividido en 5 hojas, con su correspondiente 
+            formulario, tabla, enlaces">
+    <meta name="keyword" content="travel, viajar, blog, europa, mundo">
+    <link rel="stylesheet" type="text/css" href="css/estilos1.css" media="screen" title="Página de inicio"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css" media="screen" title="Viajes por Europa"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos3.css" media="screen" title="Viajes por el resto del Mundo"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos4.css" media="screen" title="Formulario"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos5.css" media="screen" title="Tabla"/>
+    <title>Página de inicio</title>
 </head>
 
-<body bgcolor="#E6B0AA">
+<body>
     <!--Cabecera de la página-->
     <header>
-        <nav id="menu">
-            <a class="menu" href="#"><img src="img/menu.png" height="30px" width="30px" align="left" alt="menu"/></a>
+        <nav id="navegacion">
+            <a id="home" href="#">Home</a>
+            <a id="news" href="#">News</a>
+            <a id="contact" href="#">Contact</a>
+
+            <input type="search" autocomplete="off" name="buscador" id="buscador" 
+                placeholder="Escribe un destino..." required>
+
+            <input type="submit" value="About" id="boton">
         </nav>
-        <nav id="user">
-            <a class="user" href="#"><img src="img/user.png" height="35px" width="35px" align="right" alt="user"/></a>
-        </nav>
-        <br>
     </header>            
 
     <!--Cuerpo de la página-->
-    <main align="center">
-        <h1><font color="#C2185B">Los viajes de Aroa</font></h1>
-
-        <section id="imagen">
-            <img src="img/Día 21 - Islas Phi Phi (65).jpg" height="300px" width="600px" alt="cabecera">
+    <main>
+        <section id="cabecera">
+            <h1>Los viajes de Aroa</h1>
+            <img src="img/Día 21 - Islas Phi Phi (65).jpg" alt="cabecera">
             <h2>«Ve el mundo. Es más fantástico que cualquier sueño» <em>Ray Bradbury</em></h2>
         </section>
 
-        <!--Con "optgroup" creo subsecciones para marcar la diferencia entre "todas los contientes"-->
-        <select name="continentes" id="continentes">
-            <option value="continentes">CONTINENTES</option>
-            <option value="continentes">--------------</option>
-            <option value="pais"> </option>
+        <section id="desplegableCont">
+            <select name="continentes" class="continentes">
+                <option value="continentes" id="cont">CONTINENTES</option>
+                <option></option>
 
-            <optgroup label="Europa">
-                <option value="pais"></option>
-                <option value="pais">Italia</option>
-                <option value="pais">Bélgica</option>
-                <option value="pais">Países Bajos</option>
-                <option value="pais">Escocia</option>
-                <option value="pais">Noruega</option>
-                <option value="pais">Austria</option>
-                <option value="pais">Reino Unido</option>
-                <option value="pais">Suecia</option>
-                <option value="pais">República Checa</option>
-                <option value="pais">Hungría</option>
-                <option value="pais">Chipre</option>
-                <option value="pais">Polonia</option>
-                <option value="pais">Bosnia</option>
-                <option value="pais">Eslovenia</option>
-                <option value="pais">Montenegro</option>
-                <option value="pais">Croacia</option>
-                <option value="pais">Francia</option>
-                <option value="pais">Francia (Alsacia)</option>
-                <option value="pais">Alemania  (Selva Negra)</option>
-                <option value="pais">Turquía</option>
-                <option value="pais"></option>
-            </optgroup>
+                <!--Con "optgroup" creo subsecciones para marcar la diferencia entre "todas los contientes"-->
+                <optgroup label="Europa">
+                    <option></option>
+                    <option value="Italia">Italia</option>
+                    <option value="Bélgica">Bélgica</option>
+                    <option value="Países Bajos">Países Bajos</option>
+                    <option value="Escocia">Escocia</option>
+                    <option value="Noruega">Noruega</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="Suecia">Suecia</option>
+                    <option value="República Checa">República Checa</option>
+                    <option value="Hungría">Hungría</option>
+                    <option value="Chipre">Chipre</option>
+                    <option value="Polonia">Polonia</option>
+                    <option value="Bosnia">Bosnia</option>
+                    <option value="Eslovenia">Eslovenia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Croacia">Croacia</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Francia (Alsacia)">Francia (Alsacia)</option>
+                    <option value="Alemania (Selva Negra)">Alemania (Selva Negra)</option>
+                    <option value="Turquía">Turquía</option>
+                    <option></option>
+                </optgroup>
 
-            <optgroup label="Asia">
-                <option value="pais"></option>
-                <option value="pais">Bali</option>
-                <option value="pais">Tailandia</option>
-                <option value="pais">Japón</option>
-                <option value="pais">Turquía</option>
-                <option value="pais"></option>
-            </optgroup>
+                <optgroup label="Asia">
+                    <option></option>
+                    <option value="Bali">Bali</option>
+                    <option value="Tailandia">Tailandia</option>
+                    <option value="Japón">Japón</option>
+                    <option value="Turquía">Turquía</option>
+                    <option></option>
+                </optgroup>
 
-            <optgroup label="América">
-                <option value="pais"></option>
-                <option value="pais">Nueva York</option>
-                <option value="pais">Cuba</option>
-                <option value="pais">México</option>
-                <option value="pais">Jamaica</option>
-                <option value="pais">Islas Caimán</option>
-                <option value="pais"></option>
-            </optgroup>
+                <optgroup label="América">
+                    <option></option>
+                    <option value="Nueva York">EEUU</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="México">México</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Islas Caimán">Islas Caimán</option>
+                    <option></option>
+                </optgroup>
 
-            <optgroup label="África">
-                <option value="pais"></option>
-                <option value="pais">Marruecos</option>
-                <option value="pais"></option>
-            </optgroup>
+                <optgroup label="África">
+                    <option></option>
+                    <option value="Marruecos">Marruecos</option>
+                    <option></option>
+                </optgroup>
 
-            <optgroup label="Oceanía">
-                <option value="pais"></option>
-            </optgroup>
-        </select>
-    </p>
-    <br>
+                <optgroup label="Oceanía">
+                    <option></option>
+                    <option>*</option>
+                    <option></option>
+                </optgroup>
+            </select>
+        </section>
+        <br>
 
-        <section id="europa">
-            <a href="Hoja_2.html"><h1><font color="#C2185B">Viajes por Europa</font></h1></a>
+        <section id="info">
+            <article id="europa">
+                <a href="P2_Europa.html"><h1>Viajes por Europa</h1></a>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat mollis neque, 
-                ac feugiat nibh facilisis mollis. Nulla venenatis, mi eu auctor vehicula, 
-                felis odio consequat justo, blandit lobortis est leo dapibus velit. 
-                Aliquam blandit hendrerit risus vitae accumsan. Maecenas faucibus, velit ut luctus euismod, 
-                risus enim elementum lectus, eget.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat mollis neque, 
+                    ac feugiat nibh facilisis mollis. Nulla venenatis, mi eu auctor vehicula, 
+                    felis odio consequat justo, blandit lobortis est leo dapibus velit. 
+                    Aliquam blandit hendrerit risus vitae accumsan. Maecenas faucibus, velit ut luctus euismod, 
+                    risus enim elementum lectus, eget.
+                </p>
+            </article>
+
+            <article id="mundo">
+                <a href="P3_Mundo.html"><h1>Viajes por el resto del Mundo</h1></a>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris nulla, 
+                    vestibulum sit amet feugiat eget, suscipit id sem. Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et 
+                    ultrices posuere cubilia curae; Nulla sed turpis sodales, feugiat ipsum consequat, 
+                    semper magna. Nullam.
+                </p>
+                
+            </article>
+        </section>
+        <br>
+
+        <section id="organizador">
+            <h3>¿Quieres que te ayude a organizar tu viaje? ¿De cuantos días dispones?</h4>
+            <p>
+                Elige una de las opciones que mejor se ajuste a tus necesidades, 
+                te ayudaré a realizar la mejor ruta.
+            </p>
+
+            <div class="botones">
+                <button type="button" class="dos">Fin de Semana</button>
+                <button type="button" class="cuatro">4 días</button>
+                <button type="button" class="siete">7 días</button>
+                <button type="button" class="diez">10 días</button>
+                <button type="button" class="quince">15 días</button>
+            </div>
+
+            <p>
+                En caso de necesitar otro número de días, solo tienes que rellenar el formulario
+                exponiendo tu caso para ajustarlo lo mejor posible.
+            </p>
         </section>
 
-        <section id="mundo" align="center">
-            <a href="Hoja_3.html"><h1><font color="#C2185B">Viajes por el resto del Mundo</font></h1></a>
+        <section id="enlaces">
+            <h3><strong>Navega por el resto de enlaces</strong></h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris nulla, 
-                vestibulum sit amet feugiat eget, suscipit id sem. Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et 
-                ultrices posuere cubilia curae; Nulla sed turpis sodales, feugiat ipsum consequat, 
-                semper magna. Nullam.</p>
-            <br>
-        </section>
-
-        <section id="lista" align="left">
-            <h3><strong>Enlaces al resto de hojas</strong></h3>
             <ul>
-                <li><a href="Hoja_1.html">Hoja 1 - Página de inicio</a></li>
-                <li><a href="Hoja_2.html">Hoja 2 - Viajes por Europa</a></li>
-                <li><a href="Hoja_3.html">Hoja 3 - Viajes por el resto del Mundo</a></li>
-                <li><a href="Hoja_4.html">Hoja 4 - Formulario</a></li>
-                <li><a href="Hoja_5.html">Hoja 5 - Tabla con los datos formulario</a></li>
+                <li><a href="P1_Inicio.html">Página de inicio</a></li>
+                <li><a href="P2_Europa.html">Viajes por Europa</a></li>
+                <li><a href="P3_Mundo.html">Viajes por el resto del Mundo</a></li>
+                <li><a href="P4_Formulario.html">Formulario para enviar</a></li>
+                <li><a href="P5_Tabla.html">Tabla con resumen de datos</a></li>
             </ul>
         </section>
         <br>
     </main>
 
     <!--Pie de página-->
-    <footer align="center">
-        <div class="redes">
-            <a href="#"><img id="youtube" src="img/youtube.png" height="30px" width="30px" alt="youtube"></a>
-            <a href="#"><img id="facebook" src="img/facebook.png" height="30px" width="30px" alt="facebook"></a>
-            <a href="#"><img id="instagram" src="img/instagram.png" height="30px" width="30px" alt="instagram"></a>
+    <footer>
+        <div id="redes">
+            <a href="#"><img id="youtube" src="img/youtube.png" alt="youtube"></a>
+            <a href="#"><img id="facebook" src="img/facebook.png" alt="facebook"></a>
+            <a href="#"><img id="instagram" src="img/instagram.png" alt="instagram"></a>
         </div>
 
         <div id="licencia">
-            <a href="#"><font color="black"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></font></a>
+            <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
 </body>

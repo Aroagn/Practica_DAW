@@ -10,33 +10,37 @@
         content="Página HTML que contiene 5 hojas, incluyendo un formulario, una tabla, 
             una lista de enlaces.">
     <meta name="keyword" content="HTML, travel, viajar, blog">
-    <title>Hoja_5</title>
-
-    <!--Código para visualizar los bordes de la tabla-->
-    <style>
-        table,th,th,td {
-            border: solid;
-        }
-    </style>
-    
+    <link rel="stylesheet" type="text/css" href="css/estilos5.css" media="screen"/>
+    <title>Tabla</title>
 </head>
-<body bgcolor="#E6B0AA" align="center">
+
+<body>
     <!--Cabecera de la página-->
     <header>
-        <h1><font color="#C2185B">Tabla de datos formulario</font></h1></body>
-        <br>
-    </header>
-    
+        <nav id="navegacion">
+            <a id="home" href="#">Home</a>
+            <a id="news" href="#">News</a>
+            <a id="contact" href="#">Contact</a>
+
+            <input type="search" autocomplete="off" name="buscador" id="buscador" 
+                placeholder="Escribe un destino..." required>
+
+            <input type="submit" value="About" id="boton">
+        </nav>
+    </header>  
 
     <!--Cuerpo de la página-->
     <main>
-        <table align="center">
+        <h1>Resumen de datos</h1>
+        <br>
+
+        <table>
             <!--Cabecera de la tabla-->
             <thead>
                 <tr>
                     <!--Le damos valor a las celdas del encabezado de las columnas-->
                     <th>Datos solicitados</th>
-                    <th>Datos a completar</th>
+                    <th>Datos facilitados</th>
                 </tr>
             </thead>
 
@@ -44,65 +48,62 @@
             <tbody>
                 <!--Le damos valor a las filas-->               
                 <tr>
-                    <td>Nombre</td>
-                    <td>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" maxlength="50"/>
-                    </td>
+                    <td><strong>Nombre</strong></td>
+                    <!-- Dato ficticio -->
+                    <td>Jose Luis</td>
                 </tr>
 
                 <tr>
-                    <td>Apellidos</td>
-                    <td>
-                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" maxlength="80"/>
-                    </td>
+                    <td><strong>Apellidos</strong></td>
+                    <!-- Dato ficticio -->
+                    <td>Núñez</td>
                 </tr>
 
                 <tr>
-                    <td>Sexo</td>
-                    <td>
-                        <input type="text" name="sexo" id="sexo" placeholder="Sexo" maxlength="10"/>
-                    </td>
+                    <td><strong>Sexo</strong></td>
+                    <!-- Dato ficticio -->
+                    <td>Hombre</td>
                 </tr>
 
                 <tr>
-                    <td>Teléfono</td>
-                    <td>
-                        <input type="tel" name="telefono" id="telefono" pattern="{9}[0-9]" placeholder="Teléfono"/>
-                    </td>
+                    <td><strong>Teléfono</strong></td>
+                    <!-- Dato ficticio -->
+                    <td>654321987</td>
                 </tr>
 
                 <tr>
-                    <td>Email</td>
-                    <td>
-                        <input type="email" name="email" id="email" placeholder="Email" maxlength="100" required/>
-                    </td>
+                    <td><strong>Email</strong></td>
+                    <!-- Dato ficticio -->
+                    <td>joseluis@gmail.com</td>
                 </tr>
             </tbody>
         </table>
         <br>
 
-        <section id="lista" align="left">
-            <h3><strong>Enlaces al resto de hojas</strong></h3>
+        <section id="enlaces">
+            <h3><strong>Navega por el resto de enlaces</strong></h3>
+
             <ul>
-                <li><a href="Hoja_1.html">Hoja 1 - Página de inicio</a></li>
-                <li><a href="Hoja_2.html">Hoja 2 - Viajes por Europa</a></li>
-                <li><a href="Hoja_3.html">Hoja 3 - Viajes por el resto del Mundo</a></li>
-                <li><a href="Hoja_4.html">Hoja 4 - Formulario</a></li>
-                <li><a href="Hoja_5.html">Hoja 5 - Tabla con los datos formulario</a></li>
+                <li><a href="P1_Inicio.html"> Página de inicio</a></li>
+                <li><a href="P2_Europa.html">Viajes por Europa</a></li>
+                <li><a href="P3_Mundo.html">Viajes por el resto del Mundo</a></li>
+                <li><a href="P4_Formulario.html">Formulario para enviar</a></li>
+                <li><a href="P5_Tabla.html">Tabla con resumen de datos</a></li>
+            </ul>
         </section>
         <br>
     </main>
 
     <!--Pie de página-->
-    <footer align="center">
-        <div class="redes">
-            <a href="#"><img id="youtube" src="img/youtube.png" height="30px" width="30px" alt="youtube"></a>
-            <a href="#"><img id="facebook" src="img/facebook.png" height="30px" width="30px" alt="facebook"></a>
-            <a href="#"><img id="instagram" src="img/instagram.png" height="30px" width="30px" alt="instagram"></a>
+    <footer>
+        <div id="redes">
+            <a href="#"><img id="youtube" src="img/youtube.png" alt="youtube"></a>
+            <a href="#"><img id="facebook" src="img/facebook.png" alt="facebook"></a>
+            <a href="#"><img id="instagram" src="img/instagram.png" alt="instagram"></a>
         </div>
 
         <div id="licencia">
-            <a href="#"><font color="black"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></font></a>
+            <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
 </body>

@@ -5,242 +5,315 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aroa Gil Núñez">
-    <meta 
-        name="descripción" 
-        content="Página HTML que contiene 5 hojas, incluyendo un formulario, una tabla, 
-            una lista de enlaces.">
-    <meta name="keyword" content="HTML, travel, viajar, blog">
-    <title>Hoja_2</title>
+    <meta name="descripción" 
+        content="Blog personal de viajes dividido en 5 hojas, con su correspondiente 
+            formulario, tabla, enlaces">
+    <meta name="keyword" content="travel, viajar, blog, europa, mundo">
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css" media="screen"/>
+    <title>Viajes por Europa</title>
 </head>
 
-<!--Cuerpo de la página-->
-<body bgcolor="#E6B0AA" align="center">
+<body>
     <!--Cabecera de la página-->
     <header>
-        <h1><font color="#C2185B">Viajes por Europa</font></h1></body>
-        <br>
-    </header>
-    
+        <nav id="navegacion">
+            <a id="home" href="#">Home</a>
+            <a id="news" href="#">News</a>
+            <a id="contact" href="#">Contact</a>
+
+            <input type="search" autocomplete="off" name="buscador" id="buscador" 
+                placeholder="Escribe un destino..." required>
+
+            <input type="submit" value="About" id="boton">
+        </nav>
+    </header>            
     
     <!--Cuerpo de la página-->
     <main>
-        <section id="buscador">
-            <input type="text" style="width:400px; height: 20px;" name="buscador" id="buscador" 
-                placeholder="Escribe un destino a ver si te puedo ayudar..." autofocus="autofocus"/>
+        <section id="cabecera">
+            <h1>Viajes por Europa</h1>
+            <h2>Estos son los países donde he estado. ¿A cuál te gustaría viajar?</h2>
         </section>
-        <br>
 
         <section id="destinos">
-            <h2><u><font color="#C2185B">Destinos disfrutados</font></u></h2>
-
-            <p>
-                <!--Con los enlaces a la imagen simulo que lleva a la pagína con su correspondiente explicación y demás información-->
-                <label for="Pais"><a href="img/Roma.jpg"><strong><font color="black">Italia</font></strong></a></label>
-                <select name="Ciudades" id="Ciudades ">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Roma</option>
+            <div id="Italia">            
+                <img src="img/Roma.jpg" alt="Italia">
+                <select name="Ciudades" id="Italia">
+                    <option>Italia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Roma">Roma</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Bruselas Día 25 (20).JPG"><strong><font color="black">Bélgica</font></strong></a></label>
-                <select name="Ciudades" id="Ciudades ">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Bruselas</option>
-                    <option value="Ciudad">Gante</option>
-                    <option value="Ciudad">Brujas</option>
-                    <option value="Ciudad">Amberes</option>
-                    <option value="Ciudad">Lieja</option>
+            <div>
+                <img src="img/Bruselas Día 25 (20).JPG" alt="Bélgica">
+                <select name="Ciudades" id="Bélgica">
+                    <option>Bélgica</option>
+                    <option>  -  -  -  </option>
+                    <option value="Bruselas">Bruselas</option>
+                    <option value="Gante">Gante</option>
+                    <option value="Brujas">Brujas</option>
+                    <option value="Amberes">Amberes</option>
+                    <option value="Lieja">Lieja</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Amsterdam.jpg"><strong><font color="black">Países Bajos</font></strong></a></label>
-                <select name="Ciudades" id="Ciudades ">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Ámsterdam</option>
+            <div>
+                <img src="img/Amsterdam.jpg" alt="Países Bajos">
+                <select name="Ciudades" id="Países Bajos">
+                    <option>Países Bajos</option>
+                    <option>  -  -  -  </option>
+                    <option value="Ámsterdam">Ámsterdam</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Edimburgo.jpg"><strong><font color="black">Escocia</font></strong></a></label>
-                <select name="Ciudades" id="Ciudades ">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Edimburgo</option>
-                    <option value="Ciudad">Lago Ness</option>
-                    <option value="Ciudad">Inverness</option>
+            <div>
+                <img src="img/Edimburgo.jpg" alt="Escocia">
+                <select name="Ciudades" id="Escocia">
+                    <option>Escocia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Edimburgo">Edimburgo</option>
+                    <option value="Lago Ness">Lago Ness</option>
+                    <option value="Inverness">Inverness</option>
+                    <option></option>
                 </select>
-            </p>
+            </div>
 
-            <p>
-                <label for="Pais"><a href="img/Geiranger y Mirador Flydalsjuvet.jpg"><strong><font color="black">Noruega</font></strong></a></label>
-                <select name="Ciudades" id="Ciudades ">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Fiordo Hellesylt</option>
-                    <option value="Ciudad">Fiordo Geiranger</option>
-                    <option value="Ciudad">Lago Djupvatnet</option>
-                    <option value="Ciudad">Fiordo Faleidfjorden y Olden</option>
-                    <option value="Ciudad">Glaciar de Briksdal</option>
-                    <option value="Ciudad">Tren de Flam</option>
-                    <option value="Ciudad">Bergen</option>
+            <div>
+                <img src="img/Geiranger y Mirador Flydalsjuvet.jpg" alt="Noruega">
+                <select name="Ciudades" id="Noruega">
+                    <option>Noruega</option>
+                    <option>  -  -  -  </option>
+                    <option value="Fiordo Hellesylt">Fiordo Hellesylt</option>
+                    <option value="iordo Geiranger">Fiordo Geiranger</option>
+                    <option value="Lago Djupvatnet">Lago Djupvatnet</option>
+                    <option value="Fiordo Faleidfjorden y Olden">Fiordo Faleidfjorden y Olden</option>
+                    <option value="Glaciar de Briksdal">Glaciar de Briksdal</option>
+                    <option value="Tren de Flam">Tren de Flam</option>
+                    <option value="Bergen">Bergen</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Viena.jpg"><strong><font color="black">Austria</font></strong></a></label>
+            <div>
+                <img src="img/Viena.jpg" alt="Austria">
                 <select name="Ciudades" id="Austria">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Viena</option>
+                    <option>Austria</option>
+                    <option>  -  -  -  </option>
+                    <option value="Viena">Viena</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Londres Día 06 (120).JPG"><strong><font color="black">Reino Unido</font></strong></a></label>
+            <div>
+                <img src="img/Londres Día 06 (120).JPG" alt="Reino Unido">
                 <select name="Ciudades" id="Reino Unido">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Londres</option>
+                    <option>Reino Unido</option>
+                    <option>  -  -  -  </option>
+                    <option value="Londres">Londres</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Estocolmo.jpg"><strong><font color="black">Suecia</font></strong></a></label>
+            <div>
+                <img src="img/Estocolmo.jpg" alt="Suecia">
                 <select name="Ciudades" id="Suecia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Estocolmo</option>
+                    <option>Suecia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Estocolmo">Estocolmo</option>
+                    <option></option>
                 </select>
-            </p>
+            </div>
 
-            <p>
-                <label for="Pais"><a href="img/Praga Día 22 (92).JPG"><strong><font color="black">República Checa</font></strong></a></label>
+            <div>
+                <img src="img/Praga Día 22 (92).JPG" alt="República Checa">
                 <select name="Ciudades" id="República Checa">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Praga</option>
+                    <option>República Checa</option>
+                    <option>  -  -  -  </option>
+                    <option value="Praga">Praga</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Budapest Día 26 (96).JPG"><strong><font color="black">Hungría</font></strong></a></label>
+            <div>
+                <img src="img/Budapest Día 26 (96).JPG" alt="Hungría">
                 <select name="Ciudades" id="Hungría">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Budapest</option>
+                    <option>Hungría</option>
+                    <option>  -  -  -  </option>
+                    <option value="Budapest">Budapest</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Nissi Beach Chipre.jpg"><strong><font color="black">Chipre</font></strong></a></label>
+            <div>
+                <img src="img/Nissi Beach Chipre.jpg" alt="Chipre">
                 <select name="Ciudades" id="Chipre">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Larnaca</option>
+                    <option>Chipre</option>
+                    <option>  -  -  -  </option>
+                    <option value="Larnaca">Larnaca</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Cracovia (29).jpg"><strong><font color="black">Polonia</font></strong></a></label>
+            <div>
+                <img src="img/Cracovia (29).jpg" alt="Polonia">
                 <select name="Ciudades" id="Polonia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Cracovia</option>
-                    <option value="Ciudad">Varsovia</option>
-                    <option value="Ciudad">Auschiwitz y Birkneau</option>
-                    <option value="Ciudad">Minas de Sal de Wieliczka</option>
+                    <option>Polonia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Cracovia">Cracovia</option>
+                    <option value="Varsovia">Varsovia</option>
+                    <option value="Auschiwitz y Birkneau">Auschiwitz y Birkneau</option>
+                    <option value="Minas de Sal de Wieliczka">Minas de Sal de Wieliczka</option>
+                    <option></option>
                 </select>
-            </p>
+            </div>
 
-            <p>
-                <label for="Pais"><a href="img/Mostar (6).jpg"><strong><font color="black">Bosnia</font></strong></a></label>
+            <div>
+                <img src="img/Mostar (6).jpg" alt="Bosnia">
                 <select name="Ciudades" id="Bosnia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Mostar</option>
-                    <option value="Ciudad">Blagaj</option>
-                    <option value="Ciudad">Kravika</option>
-                    <option value="Ciudad">Pocitelj</option>
+                    <option>Bosnia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Mostar">Mostar</option>
+                    <option value="Blagaj">Blagaj</option>
+                    <option value="Kravika">Kravika</option>
+                    <option value="Pocitelj">Pocitelj</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Liubliana.jpg"><strong><font color="black">Eslovenia</font></strong></a></label>
+            <div>
+                <img src="img/Liubliana.jpg" alt="Eslovenia">
                 <select name="Ciudades" id="Eslovenia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Liubliana</option>
-                    <option value="Ciudad">Lago Bled</option>
+                    <option>Eslovenia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Liubliana">Liubliana</option>
+                    <option value="Lago Bled">Lago Bled</option>
+                    <option></option>
                 </select>
+            </div>
             
-                <label for="Pais"><a href="img/Perst (4).jpg"><strong><font color="black">Montenegro</font></strong></a></label>
+            <div>
+                <img src="img/Perst (4).jpg" alt="Montenegro">
                 <select name="Ciudades" id="Montenegro">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Kotor</option>
-                    <option value="Ciudad">Perast</option>
+                    <option>Montenegro</option>
+                    <option>  -  -  -  </option>
+                    <option value="Kotor">Kotor</option>
+                    <option value="Perast">Perast</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Dubrovnik (6).jpg"><strong><font color="black">Croacia</font></strong></a></label>
+            <div>
+                <img src="img/Dubrovnik (6).jpg" alt="Croacia">
                 <select name="Ciudades" id="Croacia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Dubrovnik</option>
-                    <option value="Ciudad">Korcula</option>
-                    <option value="Ciudad">Plitvice</option>
-                    <option value="Ciudad">Sibenik</option>
-                    <option value="Ciudad">Split</option>
-                    <option value="Ciudad">Ston</option>
-                    <option value="Ciudad">Trogir</option>
-                    <option value="Ciudad">Zadar</option>
-                    <option value="Ciudad">Zagreb</option>
+                    <option>Croacia</option>
+                    <option>  -  -  -  </option>
+                    <option value="Dubrovnik">Dubrovnik</option>
+                    <option value="Korcula">Korcula</option>
+                    <option value="Plitvice">Plitvice</option>
+                    <option value="Sibenik">Sibenik</option>
+                    <option value="Split">Split</option>
+                    <option value="Ston">Ston</option>
+                    <option value="Trogir">Trogir</option>
+                    <option value="Zadar">Zadar</option>
+                    <option value="Zagreb">Zagreb</option>
+                    <option></option>
                 </select>
-            </p>
+            </div>
 
-            <p>
-                <label for="Pais"><a href="img/París Día 21-2 (29).jpg"><strong><font color="black">Francia</font></strong></a></label>
+            <div>
+                <img src="img/París Día 21-2 (29).jpg" alt="Francia">
                 <select name="Ciudades" id="Francia">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">París</option>
+                    <option>Francia</option>
+                    <option>  -  -  -  </option>
+                    <option value="París">París</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Eguisheim (14).jpg"><strong><font color="black">Francia (Alsacia)</font></strong></a></label>
+            <div>
+                <img src="img/Eguisheim (14).jpg" alt="Francia (Alsacia)">
                 <select name="Ciudades" id="Francia (Alsacia)">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Mulhouse</option>
-                    <option value="Ciudad">Eguisheim</option>
-                    <option value="Ciudad">Colmar</option>
-                    <option value="Ciudad">Turckheim</option>
-                    <option value="Ciudad">Kaysersberg</option>
-                    <option value="Ciudad">Riquewihr</option>
-                    <option value="Ciudad">Ribeauvillé</option>
-                    <option value="Ciudad">Sélestat</option>
-                    <option value="Ciudad">Haut-Koenigsbourg</option>
-                    <option value="Ciudad">Barr</option>
-                    <option value="Ciudad">Obernai</option>
-                    <option value="Ciudad">Strasburg</option>
+                    <option>Francia (Alsacia)</option>
+                    <option>  -  -  -  </option>
+                    <option value="Mulhouse">Mulhouse</option>
+                    <option value="Eguisheim">Eguisheim</option>
+                    <option value="Colmar">Colmar</option>
+                    <option value="Turckheim">Turckheim</option>
+                    <option value="Kaysersberg">Kaysersberg</option>
+                    <option value="Riquewihr">Riquewihr</option>
+                    <option value="Ribeauvillé">Ribeauvillé</option>
+                    <option value="Sélestat">Sélestat</option>
+                    <option value="Haut-Koenigsbourg">Haut-Koenigsbourg</option>
+                    <option value="Barr">Barr</option>
+                    <option value="Obernai">Obernai</option>
+                    <option value="Strasburg">Strasburg</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Schiltach (7).jpg"><strong><font color="black">Alemania (Selva Negra)</font></strong></a></label>
+            <div>
+                <img src="img/Schiltach (7).jpg" alt="Alemania (Selva Negra)">
                 <select name="Ciudades" id="Alemania (Selva Negra)">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Gengenbach</option>
-                    <option value="Ciudad">Baden-Baden</option>
-                    <option value="Ciudad">Gernsbach</option>
-                    <option value="Ciudad">Calw</option>
-                    <option value="Ciudad">Freudenstadt</option>
-                    <option value="Ciudad">Alpirsbach</option>
-                    <option value="Ciudad">Castillo Hohenzollern</option>
-                    <option value="Ciudad">Schiltach</option>
-                    <option value="Ciudad">Triberg</option>
-                    <option value="Ciudad">Hornberg</option>
-                    <option value="Ciudad">Schonach</option>
-                    <option value="Ciudad">Titisee-Neustadt</option>
-                    <option value="Ciudad">Sankt Peter</option>
-                    <option value="Ciudad">Freiburg</option>
+                    <option>Alemania (Selva Negra)</option>
+                    <option>  -  -  -  </option>
+                    <option value="Gengenbach">Gengenbach</option>
+                    <option value="Baden-Baden">Baden-Baden</option>
+                    <option value="Gernsbach">Gernsbach</option>
+                    <option value="Calw">Calw</option>
+                    <option value="Freudenstadt">Freudenstadt</option>
+                    <option value="Alpirsbach">Alpirsbach</option>
+                    <option value="Castillo Hohenzollern">Castillo Hohenzollern</option>
+                    <option value="Schiltach">Schiltach</option>
+                    <option value="Triberg">Triberg</option>
+                    <option value="Hornberg">Hornberg</option>
+                    <option value="Schonach">Schonach</option>
+                    <option value="Titisee-Neustadt">Titisee-Neustadt</option>
+                    <option value="Sankt Peter">Sankt Peter</option>
+                    <option value="Freiburg">Freiburg</option>
+                    <option></option>
                 </select>
+            </div>
 
-                <label for="Pais"><a href="img/Estambul.jpg"><strong><font color="black">Turquía</font></strong></a></label>
+            <div>
+                <img src="img/Estambul.jpg" alt="Turquía">
                 <select name="Ciudades" id="Turquía">
-                    <option value="Ciudad"> -- Ciudades -- </option>
-                    <option value="Ciudad">Estambul</option>
+                    <option>Turquía</option>
+                    <option>  -  -  -  </option>
+                    <option value="Estambul">Estambul</option>
+                    <option></option>
                 </select>
-            </p>
+            </div>
         </section>
         <br>
 
-        <section id="lista" align="left">
-            <h3><strong>Enlaces al resto de hojas</strong></p>
+        <section id="enlaces">
+            <h3><strong>Navega por el resto de enlaces</strong></h3>
+
             <ul>
-                <li><a href="Hoja_1.html">Hoja 1 - Página de inicio</a></li>
-                <li><a href="Hoja_2.html">Hoja 2 - Viajes por Europa</a></li>
-                <li><a href="Hoja_3.html">Hoja 3 - Viajes por el resto del Mundo</a></li>
-                <li><a href="Hoja_4.html">Hoja 4 - Formulario</a></li>
-                <li><a href="Hoja_5.html">Hoja 5 - Tabla con los datos formulario</a></li>
+                <li><a href="P1_Inicio.html"> Página de inicio</a></li>
+                <li><a href="P2_Europa.html">Viajes por Europa</a></li>
+                <li><a href="P3_Mundo.html">Viajes por el resto del Mundo</a></li>
+                <li><a href="P4_Formulario.html">Formulario para enviar</a></li>
+                <li><a href="P5_Tabla.html">Tabla con resumen de datos</a></li>
             </ul>
         </section>
         <br>
     </main>
 
     <!--Pie de página-->
-    <footer align="center">
-        <div class="redes">
-            <a href="#"><img id="youtube" src="img/youtube.png" height="30px" width="30px" alt="youtube"></a>
-            <a href="#"><img id="facebook" src="img/facebook.png" height="30px" width="30px" alt="facebook"></a>
-            <a href="#"><img id="instagram" src="img/instagram.png" height="30px" width="30px" alt="instagram"></a>
+    <footer>
+        <div id="redes">
+            <a href="#"><img id="youtube" src="img/youtube.png" alt="youtube"></a>
+            <a href="#"><img id="facebook" src="img/facebook.png" alt="facebook"></a>
+            <a href="#"><img id="instagram" src="img/instagram.png" alt="instagram"></a>
         </div>
 
         <div id="licencia">
-            <a href="#"><font color="black"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></font></a>
+            <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
 </body>
