@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html, body{
+    display: grid;
+    position: relative;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.394), rgba(255, 255, 255, 0.401)), 
+        url(../img/tom-barrett-M0AWNxnLaMw-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(31, 31, 31, 0.897);
+}
+
+/* CABECERA DE LA PÁGINA */
+
+/* Barra de Navegación */
+
+header{
+    align-self: flex-start;
+    background-color: rgba(31, 31, 31, 0.476);
+    border-bottom: 1.5px solid black;
+    padding: 1%;
+}
+
+#navegacion{
+    display: grid;
+    grid-template-columns: 7% 7% 9% 70% 7%;
+    background-color: rgba(180, 180, 180, 0.401);
+    border: 2px solid rgba(31, 31, 31, 0.596);
+}
+
+#home{
+    grid-column: 1/2;
+}
+
+#news{
+    grid-column: 2/3;
+}
+
+#contact{
+    grid-column: 3/4;
+}
+
+#navegacion a, #buscador, #boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+    padding: 1%;
+}
+
+#navegacion a:hover{
+    background-color: rgba(61, 182, 226, 0.418);
+}
+
+#buscador{
+    grid-column: 4/5;
+    background-color: transparent;
+    border: none;
+    padding-left: 5%;
+}
+
+
+#buscador::placeholder{
+    color: rgba(31, 31, 31, 0.613);
+}
+
+#boton{
+    grid-column: 5/6;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+#boton:hover{
+    background-color: rgba(61, 182, 226, 0.418);
+}
+
+/* CUERPO DE LA PÁGINA */
+
+/* Cabecera */
+
+#cabecera{
+    display: block;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#cabecera h1{
+    font-size: 70px;
+    margin: 2%;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.39);
+}
+
+#cabecera img{
+    height: 300px;
+    width: 650px;
+    box-shadow: 0px 0px 25px 3px black;
+    margin: 2%;
+}
+
+/* Desplegable Continentes */
+
+#desplegableCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+}
+
+.continentes{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    text-shadow:  1px 1px rgba(0, 0, 0, 0.39);
+    color: rgba(31, 31, 31, 0.897);
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 3em;
+    background-color: rgba(252, 252, 252, 0.476);
+}
+
+.continentes option{
+    font-size: 15px;
+}
+
+#cont{
+    text-align: center;
+}
+
+.continentes:hover {
+    border-color: rgba(31, 31, 31, 0.897);
+    box-shadow: 0px 0px 10px 3px black;
+}
+
+/* Información sobre los viajes de Europa y del resto del Mundo */
+
+#info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+}
+
+#info article{
+    width: 80%;
+    text-align: justify;
+}
+
+#info a{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(31, 31, 31, 0.897);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.39);
+}
+
+#info p{
+    padding-top: 3%;
+}
+
+#intro a:hover{
+    text-decoration: dashed;
+}
+
+/* Organizador Viajes */
+
+#organizador{
+    margin-top: 5%;
+    margin-inline: 7%;
+}
+
+#organizador h3, #organizador p{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding: 0.5%;
+}
+
+.botones{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 1%;
+}
+
+.botones button{
+    padding: 1%;
+    font-size: 15px;
+    border-radius: 3em;
+    background-color: rgba(252, 252, 252, 0.476);
+}
+
+.botones button:hover{
+    background-color: rgba(252, 252, 252, 0.800);
+    box-shadow: 0px 0px 3px 3px rgba(31, 31, 31, 0.497);
+    cursor: pointer;
+}
+
+/* Enlaces páginas */
+
+#enlaces{
+    text-align: center;
+    padding: 5%;
+}
+
+#enlaces h3{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.39);
+    padding-bottom: 1%;
+}
+
+#enlaces ul, a{
+    list-style:none;
+    color: rgba(31, 31, 31, 0.897);
+    font-size: 20px;
+}
+
+#enlaces a:hover{
+    text-decoration: dashed;
+    font-size: 25px;
+}
+
+/* PIE DE LA PÁGINA */
+
+/* Redes */
+
+footer {
+    bottom: 0;
+    align-self: flex-end;
+    text-align: center;
+    padding: 1%;
+    background-color: rgba(31, 31, 31, 0.476);
+    border-top: 1.5px solid black;
+}
+
+#redes img {
+    height: 30px;
+    width: 30px;
+    border-radius: 25%;
+    padding-inline: 10px;
+}
+
+#redes img:hover{
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.39);;
+}
+
+
+#redes a:hover {
+    color: rgb(212, 49, 85);
+}
+
+/* Licencia */
+
+#licencia{
+    padding-inline: 10%;
+    text-align: center;
+}
+
+#licencia a {    
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    margin-top: 5%;
+}
+
+#licencia a:hover {
+    text-decoration: underline;
+    color:rgba(255, 255, 255, 0.538);
+}
+
+/* RESPONSIVE */
+
+/* Media queries de 500px hasta 899px */
+
+@media only screen and (min-width: 500px) and (max-width: 899px){
+
+    /* Barra de Navegación */
+
+    #navegacion{
+        display: grid;
+        grid-template-columns: 10% 10% 12% 58% 10%;
+        margin: 1%;
+    }
+    
+    #navegacion a, #buscador, #boton{
+        font-size: 15px;
+        padding: 1%;
+    }
+
+    /* Cabecera */
+
+    #cabecera h1{
+        font-size: 60px;
+        padding: 3%;
+    }
+
+    #cabecera img{
+        height: 200px;
+        width: 450px;    
+    }
+    
+    /* Información viajes */
+
+    #info {
+        margin-inline: 2%;
+    }
+
+    #info a{
+        text-align: center;
+    }
+}
+
+/* Media queries hasta 499px */
+
+@media only screen and (max-width: 499px){
+
+    /* Barra de Navegación */
+
+    #navegacion{
+        display: grid;
+        grid-template-columns: 12% 12% 14% 50% 12%;
+        margin: 2%;
+    }
+    
+    #navegacion a, #buscador, #boton{
+        font-size: 13px;
+        padding: 5%;
+    }
+
+    /* Cabecera */
+
+    #cabecera h1{
+        font-size: 32px;
+        padding: 5%;
+    }
+
+    #cabecera img{
+        height: 100px;
+        width: 250px;    
+    }
+
+    #cabecera h2{
+        font-size: 18px;
+        padding: 7%;
+    }
+
+    /* Desplegable continentes */
+
+    .continentes{
+        font-size: 15px;
+    }
+
+    /* Información viajes */
+
+    #info{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #info article{
+        font-size: 15px;
+        width: 80%;
+        padding: 2%;
+    }
+
+    #info a{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Organizador de viajes */
+
+    #organizador h3, #organizador p, .botones{
+        padding-bottom: 5%;
+        font-size: 15px;
+        padding-inline: 2%;
+    }
+
+    /* Enlaces páginas */
+
+    #enlaces h3{
+        font-size: 20px;
+    }
+
+    #enlaces ul, a{
+        font-size: 15px;
+    }
+    
+    #enlaces a:hover{
+        text-decoration: dashed;
+        font-size: 20px;
+    }
+}
