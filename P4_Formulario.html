@@ -41,7 +41,7 @@
         </section>
         <br>
 
-        <form action="">
+        <form action="ws/crearUsuario.php" method="post" enctype="multipart/form-data">
             <!--Con fiesldset marcamos con borde el campo del formulario-->
             <fieldset id="datos">
                 <!--Con legend escribimos el título del campo-->
@@ -60,11 +60,11 @@
 
                         <label for="sexo">Sexo: </label>
                     <p>
-                        <input type="radio" name="hm" value="m" id="mujer" checked/> 
+                        <input type="radio" name="sexo" value="m" id="mujer" checked/> 
                         <!--Con checked marco de manera predefinida uno de los radio buttons-->
                         <label for="mujer">Mujer</label>
 
-                        <input type="radio" name="hm" value="h" id="hombre"/> 
+                        <input type="radio" name="sexo" value="h" id="hombre"/> 
                         <label for="hombre">Hombre</label>
                     </p>
                     <br>
@@ -89,7 +89,8 @@
             <fieldset id="viaje">
                 <legend><strong>Ideas del viaje</strong></legend>
 
-                <textarea id="descripcion" rows="6" cols="60" placeholder="¿Donde tienes pensado viajar?"></textarea>
+                <textarea id="descripcion" name="descripcion" rows="6" cols="60" 
+                    placeholder="¿Donde tienes pensado viajar?"></textarea>
                 
                 <p>
                     <label for="foto">Añade una foto de tu itinerario si lo prefieres: </label>
