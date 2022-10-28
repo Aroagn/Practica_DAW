@@ -10,7 +10,7 @@ require_once "interfaces/IToJson.php";
     $telefono = $_POST["telefono"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $descripcion = $_POST["descripcion"];
+    $idea = $_POST["idea"];
 
     $foto = $_FILES["foto"];
     $patch =$_SERVER["DOCUMENT_ROOT"] . "/Practica_AroaGN/ws/imgUsuarios" . "/" . $foto["name"];
@@ -18,7 +18,7 @@ require_once "interfaces/IToJson.php";
 
 // Instanciamos la clase User
 $usuario = new User($nombre, $apellidos, $sexo, $telefono, $email, $password, 
-    $descripcion, $foto);
+    $idea, $foto);
 
 //Almacenamos los datos del usuario en un archivo de texto, sin sobreescribir el contenido de ese fichero
 $archivoDatos = "datosUsuarios.txt";
@@ -30,7 +30,7 @@ $datos = array(
     "Teléfono: " . $telefono . PHP_EOL,
     "Email: " . $email . PHP_EOL,
     "Contraseña: " . $password . PHP_EOL,
-    "Descripción: " . $descripcion . PHP_EOL,
+    "Idea viaje: " . $idea . PHP_EOL,
     "Foto: " . $foto["name"] . PHP_EOL . PHP_EOL
 );
 

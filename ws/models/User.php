@@ -12,12 +12,12 @@ class User implements IToJson{
     private $telefono;
     private $email;
     private $password;
-    private $descripcion;
+    private $idea;
     private $foto;
 
     // Constructor
     public function __construct($suNombre, $susApellidos, $suSexo, $suTelefono, $suEmail, 
-        $suPassword, $suDescripcion, $suFoto){
+        $suPassword, $suIdea, $suFoto){
         
         $this->nombre = $suNombre;
         $this->apellidos = $susApellidos;
@@ -25,7 +25,7 @@ class User implements IToJson{
         $this->telefono = $suTelefono;
         $this->email = $suEmail;
         $this->password = $suPassword;
-        $this->descripcion = $suDescripcion;
+        $this->idea = $suIdea;
         $this->foto = $suFoto;
     }
 
@@ -72,11 +72,11 @@ class User implements IToJson{
         return $this->password = $suPassword;
     }
 
-    public function getDescripcion(){
-        return $this->descripcion;
+    public function getIdea(){
+        return $this->idea;
     }
-    public function setDescripcion($suDescripcion){
-        return $this->descripcion = $suDescripcion;
+    public function setIdea($suIdea){
+        return $this->idea = $suIdea;
     }
 
     public function getFoto(){
@@ -95,7 +95,7 @@ class User implements IToJson{
             "telefono" => $this->telefono,
             "email" => $this->email,
             "password" => $this->password,
-            "descripcion" => $this->descripcion,
+            "idea" => $this->idea,
             "foto" => $this->foto["name"]
         );
         
