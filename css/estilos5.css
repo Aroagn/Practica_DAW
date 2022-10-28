@@ -92,9 +92,26 @@ h1{
     display: block;
     text-align: center;
     font-family: 'Indie Flower', cursive;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.39);
     font-size: 70px;
     margin: 2%;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.39);
+}
+
+/* Filtrar */
+
+#filtrar{
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.39);
+    font-size: 25px;
+    margin-left: 6%;
+    margin-bottom: 2%;
+
+}
+
+#filtrado{
+    margin-bottom: 2%;
+    font-size: 15px;
+    width: 25%;
 }
 
 /* Tabla */
@@ -236,6 +253,30 @@ footer {
         font-size: 60px;
         padding: 3%;
     }
+
+    /* Filtrar */
+
+    #filtrar{
+        font-size: 25px;
+    }
+
+    #filtrado{
+        font-size: 15px;
+    }
+
+    /* Tabla */
+
+    table{
+        margin-inline: 5%;
+    }
+
+    thead{
+        font-size: 13px;
+    }
+
+    tbody{
+        font-size: 8px;
+    }
 }
 
 /* Media queries hasta 499px */
@@ -262,19 +303,29 @@ footer {
         padding-bottom: 5%;
     }
 
+    /* Filtrar */
+
+    #filtrar{
+        font-size: 15px;
+    }
+
+    #filtrado{
+        font-size: 10px;
+    }
+
     /* Tabla */
 
     table{
-        width: 80%;
-        margin-inline: 10%;
+        border-spacing: 2px;
+        margin-inline: 5%;
     }
 
     thead{
-        font-size: 18px;
+        font-size: 7px;
     }
 
     tbody{
-        font-size: 11px;
+        font-size: 5px;
     }
 
     /* Enlaces páginas */
