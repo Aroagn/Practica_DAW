@@ -11,6 +11,8 @@
             una lista de enlaces.">
     <meta name="keyword" content="HTML, travel, viajar, blog">
     <link rel="stylesheet" type="text/css" href="css/estilos5.css" media="screen"/>
+        <script defer src="js/user.js" type="text/javascript"></script>
+        <script defer src="js/index.js" type="text/javascript"></script>
     <title>Tabla</title>
 </head>
 
@@ -34,11 +36,17 @@
         <h1>Resumen de datos</h1>
         <br>
 
-        <table>
+        <!-- Filtrar de datos -->
+        <label for="filtrar" id="filtrar"><strong>Filtrar : </strong></label>
+        <input type="search" name="filtrado" id="filtrado">
+        <br>
+
+        <table id="tabla">
             <!--Cabecera de la tabla-->
             <thead>
                 <tr>
                     <!--Le damos valor a las columnas-->
+                    <th>Acciones</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Sexo</th>
@@ -50,29 +58,8 @@
             </thead>
 
             <!--Cuerpo de la tabla-->
-            <tbody>
-                <!--Le damos valor a las filas-->               
-                <tr>
-                    <!-- Datos ficticios -->
-                    <td>Jose Luis</td>   
-                    <td>Gil</td>
-                    <td>Hombre</td>
-                    <td>654321987</td>
-                    <td>joseluis@gmail.com</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis.</td>
-                    <td>PlaningAustralia.jpg</td>
-                </tr>
-
-                <tr>
-                    <!-- Datos ficticios -->
-                    <td>Maria Nuria</td>   
-                    <td>Núñez</td>
-                    <td>Mujer</td>
-                    <td>678901234</td>
-                    <td>nuria@gmail.com</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non.</td>
-                    <td>Bali.jpg</td>
-                </tr>
+            <tbody id="tbody">
+                <!-- Filas y valores que se rellenan con JavaScript -->
             </tbody>
         </table>
         <br>
@@ -103,5 +90,6 @@
             <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
+
 </body>
 </html>
