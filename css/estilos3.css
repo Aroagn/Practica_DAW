@@ -18,72 +18,6 @@ html, body{
     color: rgba(31, 31, 31, 0.897);
 }
 
-/* CABECERA DE LA PÁGINA */
-
-/* Barra de Navegación */
-
-header{
-    align-self: flex-start;
-    background-color: rgba(31, 31, 31, 0.476);
-    border-bottom: 1.5px solid black;
-    padding: 1%;
-}
-
-#navegacion{
-    display: grid;
-    grid-template-columns: 7% 7% 9% 70% 7%;
-    background-color: rgba(180, 180, 180, 0.401);
-    border: 2px solid rgba(31, 31, 31, 0.596);
-}
-
-#home{
-    grid-column: 1/2;
-}
-
-#news{
-    grid-column: 2/3;
-}
-
-#contact{
-    grid-column: 3/4;
-}
-
-#navegacion a, #buscador, #boton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: rgb(31, 31, 31);
-    text-decoration: none;
-    padding: 1%;
-}
-
-#navegacion a:hover{
-    background-color: rgba(61, 182, 226, 0.418);
-}
-
-#buscador{
-    grid-column: 4/5;
-    background-color: rgba(200, 200, 200, 0);
-    border: none;
-    padding-left: 5%;
-}
-
-#buscador::placeholder{
-    color: rgba(31, 31, 31, 0.613);
-}
-
-#boton{
-    grid-column: 5/6;
-    background-color: rgba(200, 200, 200, 0);
-    border: none;
-    text-decoration: none;
-}
-
-#boton:hover{
-    background-color: rgba(61, 182, 226, 0.418);
-}
-
 /* CUERPO DE LA PÁGINA */
 
 /* Cabecera */
@@ -138,97 +72,11 @@ header{
     font-size: 15px;
 }
 
-/* Enlaces páginas */
-
-#enlaces{
-    text-align: center;
-    padding: 5%;
-}
-
-#enlaces h3{
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.39);
-    padding-bottom: 1%;
-}
-
-#enlaces ul, a{
-    list-style:none;
-    color: rgba(31, 31, 31, 0.897);
-    font-size: 20px;
-}
-
-#enlaces a:hover{
-    text-decoration: dashed;
-    font-size: 25px;
-}
-
-/* PIE DE LA PÁGINA */
-
-/* Redes */
-
-footer {
-    bottom: 0;
-    align-self: flex-end;
-    text-align: center;
-    padding: 1%;
-    background-color: rgba(31, 31, 31, 0.476);
-    border-top: 1.5px solid black;
-}
-
-#redes img {
-    height: 30px;
-    width: 30px;
-    border-radius: 25%;
-    padding-inline: 10px;
-}
-
-#redes img:hover{
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.39);;
-}
-
-
-#redes a:hover {
-    color: rgb(212, 49, 85);
-}
-
-/* Licencia */
-
-#licencia{
-    padding-inline: 10%;
-    text-align: center;
-}
-
-#licencia a {    
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
-    margin-top: 5%;
-}
-
-#licencia a:hover {
-    text-decoration: underline;
-    color:rgba(255, 255, 255, 0.538);
-}
-
 /* RESPONSIVE */
 
 /* Media queries de 500px hasta 899px */
 
 @media only screen and (min-width: 500px) and (max-width: 899px){
-
-    /* Barra de Navegación */
-
-    #navegacion{
-        display: grid;
-        grid-template-columns: 10% 10% 12% 58% 10%;
-        margin: 1%;
-    }
-    
-    #navegacion a, #buscador, #boton{
-        font-size: 15px;
-        padding: 1%;
-    }
 
     /* Cabecera */
 
@@ -256,19 +104,6 @@ footer {
 /* Media queries hasta 499px */
 
 @media only screen and (max-width: 499px){
-
-    /* Barra de Navegación */
-
-    #navegacion{
-        display: grid;
-        grid-template-columns: 12% 12% 14% 50% 12%;
-        margin: 2%;
-    }
-    
-    #navegacion a, #buscador, #boton{
-        font-size: 13px;
-        padding: 5%;
-    }
 
     /* Cabecera */
 
@@ -300,20 +135,5 @@ footer {
     #destinos img{
         width: 100px;
         height: 100px;
-    }
-
-    /* Enlaces páginas */
-
-    #enlaces h3{
-        font-size: 20px;
-    }
-
-    #enlaces ul, a{
-        font-size: 15px;
-    }
-    
-    #enlaces a:hover{
-        text-decoration: dashed;
-        font-size: 20px;
     }
 }
