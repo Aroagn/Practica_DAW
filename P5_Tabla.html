@@ -5,30 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aroa Gil Núñez">
-    <meta 
-        name="descripción" 
-        content="Página HTML que contiene 5 hojas, incluyendo un formulario, una tabla, 
-            una lista de enlaces.">
-    <meta name="keyword" content="HTML, travel, viajar, blog">
+    <meta name="descripción" 
+        content="Blog personal de viajes.">
+    <meta name="keyword" content="travel, viajar, blog, europa, mundo">
+    <link rel="stylesheet" type="text/css" href="css/estilosGlobalPages.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="css/estilos5.css" media="screen"/>
-        <script defer src="js/user.js" type="text/javascript"></script>
-        <script defer src="js/index.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos4.css" media="screen"/>
+    <script defer src="js/nav.js" type="text/javascript"></script>
     <title>Tabla</title>
 </head>
 
 <body>
     <!--Cabecera de la página-->
-    <header>
-        <nav id="navegacion">
-            <a id="home" href="#">Home</a>
-            <a id="news" href="#">News</a>
-            <a id="contact" href="#">Contact</a>
-
-            <input type="search" autocomplete="off" name="buscador" id="buscador" 
-                placeholder="Escribe un destino..." required>
-
-            <input type="submit" value="About" id="boton">
-        </nav>
+    <header id="header">
+        <!-- Insertamos barra de Navegación con JavaScript -->
     </header>  
 
     <!--Cuerpo de la página-->
@@ -38,10 +28,10 @@
 
         <!-- Filtrar de datos -->
         <label for="filtrar" id="filtrar"><strong>Filtrar : </strong></label>
-        <input type="search" name="filtrado" id="filtrado">
+        <input type="search" name="search" id="search" onkeyup="filtrar()">
         <br>
 
-        <table id="tabla">
+        <table id="table">
             <!--Cabecera de la tabla-->
             <thead>
                 <tr>
@@ -63,19 +53,6 @@
             </tbody>
         </table>
         <br>
-
-        <section id="enlaces">
-            <h3><strong>Navega por el resto de enlaces</strong></h3>
-
-            <ul>
-                <li><a href="P1_Inicio.html"> Página de inicio</a></li>
-                <li><a href="P2_Europa.html">Viajes por Europa</a></li>
-                <li><a href="P3_Mundo.html">Viajes por el resto del Mundo</a></li>
-                <li><a href="P4_Formulario.html">Formulario para enviar</a></li>
-                <li><a href="P5_Tabla.html">Tabla con resumen de datos</a></li>
-            </ul>
-        </section>
-        <br>
     </main>
 
     <!--Pie de página-->
@@ -90,6 +67,10 @@
             <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
+
+    <!-- Scripts a ficheros JavaScript -->
+    <script src="js/user.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
 
 </body>
 </html>
