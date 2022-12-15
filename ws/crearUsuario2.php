@@ -2,7 +2,10 @@
 
 // Elimino los parámetros "idea y foto" para que no hay conflicto con la base de datos del colegio
 
+header('Content-Type: application/json; charset=utf-8');
+
 require_once "conexion.php";
+require_once "models/user.php";
 
 $nombre = $_POST['nombre'] ?? null;
 $apellidos = $_POST['apellidos'] ?? null;
@@ -56,12 +59,13 @@ class CreateUser extends Conexion {
 $usuario = new CreateUser ('localhost', 'root', '', 'colegio');  
 $array_user = $usuario->createUser($nombre, $apellidos, $sexo, $telefono, $email, $password);
 
-if (empty($array_user)) {
+$user = new User ($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*/);
+
     $usuario->succes = true;
     $usuario->message  = "Usuario creado correctamente";
+    $usuario->data = json_decode($user->toJSON() ) ;
 
     print_r(json_encode($usuario));
-    require_once "interfaces/IToJSON.php";
-}
+
 
 ?>

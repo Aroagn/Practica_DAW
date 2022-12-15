@@ -1,38 +1,36 @@
 <?php
+/*
 
-    require_once 'models/user.php';
+header('Content-Type: application/json; charset=utf-8');
 
-    // Datos recogidos del formulario
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $sexo = $_POST['sexo'];
-    $telefono = $_POST['telefono'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    //$idea = $_POST['idea'];
-    //$foto = $_FILES['foto'];
-    //$patch =$_SERVER['DOCUMENT_ROOT'] . '/Practica_AroaGN/ws/imgUsuarios' . '/' . $foto['name'];
-    //move_uploaded_file($foto['tmp_name'], $patch);
+require_once 'models/user.php';
 
-    //Almacenamos los datos del usuario en un archivo de texto, sin sobreescribir el contenido de ese fichero
-    $archivoDatos = "datosUsuarios.txt";
+$nombre = $_POST['nombre'] ?? null;
+$apellidos = $_POST['apellidos'] ?? null;
+$sexo = $_POST['sexo'] ?? null;
+$telefono = $_POST['telefono'] ?? null;
+$email = $_POST['email'] ?? null;
+$password = $_POST['password'] ?? null;
 
-    $datos = array(
-        "Nombre: " . $nombre . PHP_EOL,
-        "Apellidos: " . $apellidos . PHP_EOL,
-        "Sexo: " . $sexo . PHP_EOL,
-        "Teléfono: " . $telefono . PHP_EOL,
-        "Email: " . $email . PHP_EOL,
-        "Contraseña: " . $password . PHP_EOL,
-        //"Idea viaje: " . $idea . PHP_EOL,
-        //"Foto: " . $foto["name"] . PHP_EOL . PHP_EOL
-    );
+//Almacenamos los datos del usuario en un archivo de texto, sin sobreescribir el contenido de ese fichero
+$archivoDatos = "datosUsuarios.txt";
 
-    file_put_contents($archivoDatos, $datos, FILE_APPEND);
+$datos = array(
+    "Nombre: " . $nombre . PHP_EOL,
+    "Apellidos: " . $apellidos . PHP_EOL,
+    "Sexo: " . $sexo . PHP_EOL,
+    "Teléfono: " . $telefono . PHP_EOL,
+    "Email: " . $email . PHP_EOL,
+    "Contraseña: " . $password . PHP_EOL . PHP_EOL
+    //"Idea viaje: " . $idea . PHP_EOL,
+    //"Foto: " . $foto["name"] . PHP_EOL . PHP_EOL
+);
 
-    // Mostramos por pantalla la información del usuario en formato JSON
-$usuario = new User ($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*/);
-    echo $usuario->toJSON();     
-    
+file_put_contents($archivoDatos, $datos, FILE_APPEND);
+
+// Mostramos por pantalla la información del usuario en formato JSON
+$usuario = new User ($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*;
+echo $usuario->toJSON();     
+*/
 ?>
 

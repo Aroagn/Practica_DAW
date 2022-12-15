@@ -4,17 +4,15 @@ require_once "interfaces/IToJson.php";
 
 class User implements IToJson{
 
-    // Atributos
-    private $nombre;
-    private $apellidos;
-    private $sexo;
-    private $telefono;
-    private $email;
-    private $password;
-    //private $idea;
-    //private $foto;
+    protected $nombre = "";
+    protected $apellidos = "";
+    protected $sexo = "";
+    protected $telefono = "";
+    protected $email = "";
+    protected $password = "";
+    //protected $idea = "";
+    //protected $foto = "";
 
-    // Constructor
     public function __construct($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*/){
         
         $this->nombre = $nombre;
