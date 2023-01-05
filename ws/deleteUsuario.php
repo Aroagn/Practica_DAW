@@ -30,18 +30,16 @@ class DeleteUser extends Conexion {
             return null;
         }
     }
-
 }
 
 $alumno = new DeleteUser('localhost', 'root', '', 'colegio');
 $array_alumno = $alumno->delete_alumno($id);
 
-if (empty($array_alumno)){
-    $alumno->succes = true;
-    $alumno->message  = "Usuario eliminado correctamente";
-    $alumno->data = $query;
+$alumno->succes = true;
+$alumno->message  = "Usuario eliminado correctamente";
+$alumno->data = $query;
 
-    print_r(json_encode($alumno));
-}
+
+print_r(json_encode($alumno));
 
 ?>

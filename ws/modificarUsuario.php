@@ -24,28 +24,28 @@ class ModifyUser extends Conexion {
         if(!empty($nombre)){
             $sql = "UPDATE alumno SET nombre='$nombre' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);
-
         }
+
         if(!empty($apellidos)){
             $sql = "UPDATE alumno SET apellidos='$apellidos' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);
-
         }
+
         if(!empty($sexo)){
             $sql = "UPDATE alumno SET sexo='$sexo' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);
-
         }
+
         if(!empty($telefono)){
             $sql = "UPDATE alumno SET telefono='$telefono' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);
-
         }
+
         if(!empty($email)){
             $sql = "UPDATE alumno SET email='$email' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);
-
         }
+        
         if(!empty($password)){
             $sql = "UPDATE alumno SET password='$password' WHERE id='$id'";
             $consulta = $this->db_conexion->query($sql);

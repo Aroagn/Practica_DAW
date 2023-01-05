@@ -10,10 +10,8 @@ class User implements IToJson{
     protected $telefono = "";
     protected $email = "";
     protected $password = "";
-    //protected $idea = "";
-    //protected $foto = "";
 
-    public function __construct($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*/){
+    public function __construct($nombre, $apellidos, $sexo, $telefono, $email, $password){
         
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
@@ -21,8 +19,6 @@ class User implements IToJson{
         $this->telefono = $telefono;
         $this->email = $email;
         $this->password = $password;
-        //$this->idea = $idea;
-        //$this->foto = $foto;
     }
 
     // Getters y Setters
@@ -67,21 +63,7 @@ class User implements IToJson{
     public function setPassword($password){
         return $this->password = $password;
     }
-/*
-    public function getIdea(){
-        return $this->idea;
-    }
-    public function setIdea($idea){
-        return $this->idea = $idea;
-    }
 
-    public function getFoto(){
-        return $this->foto;
-    }
-    public function setFoto($foto){
-        return $this->foto = $foto;
-    }
-*/
     // Método toJSON
     public function toJSON(){
         $mostrarDatos = array(
@@ -91,8 +73,6 @@ class User implements IToJson{
             "telefono" => $this->telefono,
             "email" => $this->email,
             "password" => $this->password,
-            //"idea" => $this->idea,
-            //"foto" => $this->foto["name"]
         );
         
         $miJson = json_encode($mostrarDatos, JSON_UNESCAPED_UNICODE);

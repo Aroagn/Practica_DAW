@@ -1,6 +1,5 @@
 <?php
 /*
-
 header('Content-Type: application/json; charset=utf-8');
 
 require_once 'models/user.php';
@@ -29,7 +28,7 @@ $datos = array(
 file_put_contents($archivoDatos, $datos, FILE_APPEND);
 
 // Mostramos por pantalla la información del usuario en formato JSON
-$usuario = new User ($nombre, $apellidos, $sexo, $telefono, $email, $password/*, $idea, $foto*;
+$usuario = new User ($nombre, $apellidos, $sexo, $telefono, $email, $password);
 echo $usuario->toJSON();     
 */
 ?>
