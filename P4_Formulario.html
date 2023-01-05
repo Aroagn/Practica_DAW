@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/estilosGlobalPages.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="css/estilos4.css" media="screen"/>
     <script defer src="js/nav.js" type="text/javascript"></script>
+    <script defer src="js/indexForm.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Formulario</title>
 </head>
 
@@ -79,31 +81,12 @@
                 </fieldset>
             <br>
 
-            <fieldset id="viaje">
-                <legend><strong>Ideas del viaje</strong></legend>
-
-                <textarea id="idea" name="idea" rows="6" cols="60" 
-                    placeholder="¿Donde tienes pensado viajar?"></textarea>
-                
-                <p>
-                    <label for="foto">Añade una foto de tu itinerario si lo prefieres: </label>
-                    <input accept="image/jpeg,image/png,image/pdf" type="file" name="foto" id="foto" />
-                    <!--Con el atributo "accept" indico que solo puede subir ese tipo archivos de imagenes.-->
-                </p>
-                </fieldset>
-            <br>
 
             <fieldset id="enviar">
                 <legend><strong>Revise los datos y envíe el formulario</strong></legend>
-
+                
                 <button type="submit" name="enviarForm" id="enviarForm">Enviar formulario</button>
-
-                <p>En cuanto reciba todos los datos te mandaré un presupuesto.</p>
-                <p><u><strong>Gracias por confiar en mí!!</strong></u></p>
             </fieldset>
-            
-            <div class="mt-3" id="respuesta"></div>
-
         </form>
         <br>
     </main>
@@ -120,6 +103,6 @@
             <a href="#"><strong>@2022 – Todos los derechos reservados. Designed by Los Viajes de Aroa</strong></a>
         </div>
     </footer>
-    
+
 </body>
 </html>
