@@ -23,7 +23,6 @@ function agregarFila(datosUser){
         let row = tabla.insertRow(-1);
 
         row.id = numId;
-        console.log(numId);
 
         // Agregamos las celdas de la fila
         let celdaAcciones = row.insertCell(0);
