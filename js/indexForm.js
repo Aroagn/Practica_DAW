@@ -32,7 +32,6 @@ formulario.addEventListener('submit', function(e)  {
                     'Tu usuario ha sido creado.',
                     'success'
                 )
-    
             })
         
             window.location.href = "P5_Tabla.html";

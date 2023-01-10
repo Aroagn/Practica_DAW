@@ -16,14 +16,13 @@ cargarBD();
 function agregarFila(datosUser){
 
     let tabla = document.getElementById('table');
-    let num = 1;
+    let numId = 1;
 
     datosUser.forEach(element => {
-        // Insertamos una fila al final del resto
+        // Insertamos una fila al final de la tabla
         let row = tabla.insertRow(-1);
 
-        row.id = "fila" + num;
-        fila = row.id;
+        row.id = numId;
 
         // Agregamos las celdas de la fila
         let celdaAcciones = row.insertCell(0);
@@ -47,6 +46,13 @@ function agregarFila(datosUser){
         botonBorrar.value = 'Borrar';
         celdaAcciones.appendChild(botonBorrar);
 
+        // Creamos el botón de modificar para la celda acciones
+        let botonModificar = document.createElement('input');
+        botonModificar.type = 'button';
+        botonModificar.id = 'modificar';
+        botonModificar.value = 'Modificar';
+        celdaAcciones.appendChild(botonModificar);
+
         // Borramos la fila al hacer checked
         botonBorrar.addEventListener('click', (e) => {
             e.preventDefault();
@@ -65,11 +71,11 @@ function agregarFila(datosUser){
         
                 if (resultado.isConfirmed) {
 
-                    fetch('ws/deleteUsuario.php?id=')
+                    fetch('ws/deleteUsuario.php?id=' + numId)
                     .then(response => response.json())
                     
                     .then(response => {
-                        console.log(response.data);
+                        console.log(response);
                         response = e.target.parentNode.parentNode.remove();
 
                         Swal.fire(
@@ -88,21 +94,15 @@ function agregarFila(datosUser){
                 }
             }).catch(error => console.log('error', error));
         })
-
-        // Creamos el botón de modificar para la celda acciones
-        let botonModificar = document.createElement('input');
-        botonModificar.type = 'button';
-        botonModificar.id = 'modificar';
-        botonModificar.value = 'Modificar';
-        celdaAcciones.appendChild(botonModificar);
         
         // Modificamos la fila al hacer checked
         botonModificar.addEventListener('click', (e) => {
             formulario(element, row);
         })
 
+        // Añadimos una fila con un id
         row++;  
-        num++;  
+        numId++;  
     });
 }
 
