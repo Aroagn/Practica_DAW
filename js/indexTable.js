@@ -77,13 +77,13 @@ function agregarFila(datosUser){
                     .then(response => {
                         console.log(response);
                         response = e.target.parentNode.parentNode.remove();
-
-                        Swal.fire(
-                            'Confirmado!',
-                            'Tu usuario ha sido borrado.',
-                            'success'
-                        )
                     })
+
+                    Swal.fire(
+                        'Confirmado!',
+                        'Tu usuario ha sido borrado.',
+                        'success'
+                    )
 
                 } else {
                     Swal.fire(
@@ -108,7 +108,7 @@ function agregarFila(datosUser){
 
 
 // Función para ver los datos a modificar en el formulario
-function formulario(element, fila) {
+function formulario(element, row) {
 
     let main = document.querySelector('main');
     let formTabla = document.createElement('form');
@@ -151,92 +151,89 @@ function formulario(element, fila) {
         <fieldset id="enviar">
             <legend><strong>Revise los datos y envíe el formulario</strong></legend>
 
-            <button type="submit" onclick="save('${fila}')" name="guardar" id="guardar">Guardar datos</button>
+            <button type="submit" name="guardar" id="guardar">Guardar datos</button>
         </fieldset>
     `;
 
     let valorNombre = document.getElementById('nombre');
     let valorApellidos = document.getElementById('apellidos');
+    let valorSexo = document.getElementById('sexo');
     let valorTelefono = document.getElementById('telefono');
     let valorEmail = document.getElementById('email');
 
     valorNombre.value = element.nombre;
     valorApellidos.value = element.apellidos;
+    valorSexo = element.sexo;
     valorTelefono.value = element.telefono;
     valorEmail.value = element.email;
-}
 
+    console.log(valorNombre.value);
 
-// Guardamos los datos nuevos en la fila de la tabla modificada
-function save (fila) {
-
+    // Guardamos los datos nuevos en la fila de la tabla modificada
     let formulario = document.querySelector('form');
-    let datos =  new FormData(formulario);
 
-    cellNombre = datos.get('nombre');
-    cellApellidos = datos.get('apellidos'); 
-    cellSexo = datos.get('sexo');
-    cellTelefono = datos.get('telefono'); 
-    cellEmail = datos.get('email');
+    formulario.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    /*
-    let cellNombre = document.getElementById('nombre').value;
-    let cellApellidos = document.getElementById('apellidos').value
-    let cellSexo = document.getElementById('sexo').value;
-    let cellTelefono = document.getElementById('telefono').value;
-    let cellEmail = document.getElementById('email').value;
-    */
+        let data =  new FormData(formulario);
+    
+        valorNombre = data.get('nombre');
+        valorApellidos = data.get('apellidos'); 
+        valorSexo = data.get('sexo');
+        valorTelefono = data.get('telefono'); 
+        valorEmail = data.get('email');
 
-    Swal.fire({
-        title: 'Vas a mofificar un usuario',
-        text: "¿Quieres continuar?",
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonColor: '#48B0D5',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Confirmar',
-        cancelButtonText: 'Cancelar'
+        console.log(valorNombre);
 
-    }).then((resultado) => {
+        Swal.fire({
+            title: 'Vas a mofificar un usuario',
+            text: "¿Quieres continuar?",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#48B0D5',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Cancelar'
 
-        if (resultado.isConfirmed) {
+        }).then((resultado) => {
 
-            fetch('ws/modificarUsuario.php?id=')
-            .then(resp => resp.json())
-            .then(response => {
-                console.log(response.data);
+            if (resultado.isConfirmed) {
 
+                fetch('ws/modificarUsuario.php?id=' + row[i])
+                .then(resp => resp.json())
+                .then(response => console.log(response))
+
+                let tabla = document.getElementById('table');
+                let rows = tabla.getElementsByTagName('tr');
+
+                for (let i=0; i<=rows.length; i++) {
+                    if (row[i] === row) {
+                        row = 
+                            "<td><input type='button' id='borrar' value='Borrar'>" +
+                                "<input type='button' id='modificar' value='Modificar'></td>" +
+                            "<td>" + valorNombre + "</td>" +
+                            "<td>" + valorApellidos + "</td>" +
+                            "<td>" + valorSexo + "</td>" +
+                            "<td>" + valorTelefono + "</td>" +
+                            "<td>" + valorEmail + "</td>"
+                    }
+                }
+                
                 Swal.fire(
                     'Confirmado!',
                     'Tu usuario ha sido modificado.',
                     'success'
                 )
 
-                let tabla = document.getElementById('table');
-                let filas = tabla.getElementsByTagName('tr');
-            
-                for (let i=0; i<=filas.length; i++) {
-                    if (fila[i] === fila) {
-                        fila = 
-                            "<td><input type='button' id='borrar' value='Borrar'>" +
-                                "<input type='button' id='modificar' value='Modificar'></td>" +
-                            "<td>" + cellNombre + "</td>" +
-                            "<td>" + cellApellidos + "</td>" +
-                            "<td>" + cellSexo + "</td>" +
-                            "<td>" + cellTelefono + "</td>" +
-                            "<td>" + cellEmail + "</td>"
-                    }
-                }
-            })
-
-        } else {
-            Swal.fire(
-                'Cancelado!',
-                'Has cancelado la operación.',
-                'error'
-            )
-        }
-    }).catch(error => console.log('error', error));
+            } else {
+                Swal.fire(
+                    'Cancelado!',
+                    'Has cancelado la operación.',
+                    'error'
+                )
+            }
+        }).catch(error => console.log('error', error));
+    })
 }
 
 

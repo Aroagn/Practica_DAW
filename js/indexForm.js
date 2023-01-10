@@ -4,7 +4,7 @@ let formulario = document.getElementById('form');
 formulario.addEventListener('submit', function(e)  {
     e.preventDefault();
 
-    let datos =  new FormData(formulario);
+    let data =  new FormData(formulario);
 
     Swal.fire({
         title: 'Vas a crear un usuario',
@@ -22,18 +22,17 @@ formulario.addEventListener('submit', function(e)  {
 
             fetch('ws/crearUsuario2.php?id=', {
                 method: 'POST',
-                body: datos
+                body: data
             })
 
             .then(resp => resp.json())
-            .then(() => {
-                Swal.fire(
-                    'Confirmado!',
-                    'Tu usuario ha sido creado.',
-                    'success'
-                )
-            })
-        
+
+            Swal.fire(
+                'Confirmado!',
+                'Tu usuario ha sido creado.',
+                'success'
+            )
+
             window.location.href = "P5_Tabla.html";
         
         } else {
